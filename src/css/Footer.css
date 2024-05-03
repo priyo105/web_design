@@ -1,0 +1,17 @@
+.footer {
+  background-color: #131111;
+  width: "100%";
+  margin-top: 10%;
+}
+
+.white_text_small_footer {
+  color: white;
+  font-size: 15px;
+  font-family: Urbanist;
+}
+
+.white_text_gray_footer {
+  color: gray;
+  font-size: 15px;
+  font-family: Urbanist;
+}

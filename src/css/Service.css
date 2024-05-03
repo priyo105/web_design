@@ -1,0 +1,81 @@
+.basic_margins {
+  margin-top: 10%;
+  margin-left: 10%;
+}
+
+.service_font_large {
+  text-align: left;
+  font-family: Urbanist;
+  font-size: 130px;
+  font-weight: 500;
+}
+
+.service_font_large_grey {
+  text-align: left;
+  font-family: Urbanist;
+  font-size: 130px;
+  font-weight: 500;
+  color: #cccdcc;
+}
+
+.service_font_large_animated {
+  font-size: 120px;
+  text-align: center;
+  white-space: nowrap;
+
+  margin-top: 50px;
+  font-family: Urbanist;
+  margin-right: 5%;
+  font-weight: "bold";
+}
+
+.container {
+  background-color: #ffd027;
+  height: 200px;
+  border-radius: 90px;
+  width: 40%;
+  margin-bottom: 10%;
+  margin-right: 10%;
+  overflow: hidden;
+}
+
+.ser_black_text_medium {
+  font-size: 18px;
+  color: #0d0d0d;
+  font-weight: 500;
+  font-family: Urbanist;
+}
+
+.buttonlike_text {
+  padding-left: 25px;
+  padding-right: 25px;
+  text-align: center;
+  padding-top: 13px;
+  font-family: Urbanist;
+  border-radius: 20px;
+  background-color: azure;
+}
+
+.buttonlike_text_orange {
+  padding-left: 25px;
+  padding-right: 25px;
+  text-align: center;
+  padding-top: 13px;
+  color: whitesmoke;
+  font-family: Urbanist;
+  border-radius: 20px;
+  background-color: #fe4a23;
+}
+
+.rounded-text {
+  border-radius: 50%;
+  padding: 10px 15px;
+  background-color: rgba(0, 0, 0, 0.1);
+  font-size: 25px;
+  font-weight: bold;
+  display: inline-block;
+  margin-right: 4%;
+  width: fit-content;
+  text-align: center;
+  line-height: 1em;
+}

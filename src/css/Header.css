@@ -1,0 +1,35 @@
+.header {
+  margin-top: 1%;
+}
+
+.firstLine {
+  display: flex;
+  margin-left: 20%;
+}
+
+.secondLine {
+  margin-top: -170px;
+  margin-left: 18%;
+}
+
+.img_holder {
+  margin-top: 5%;
+}
+.headerFont {
+  font-size: 100px;
+  font-family: Urbanist;
+}
+
+.greytext {
+  color: #cccdcc;
+}
+
+.header_asset_01 {
+  width: "100%";
+}
+
+.thirdLine {
+  display: flex;
+  margin-top: -180px;
+  margin-left: 28%;
+}

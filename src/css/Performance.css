@@ -1,0 +1,75 @@
+.padded_margins {
+  margin-left: 20%;
+}
+
+.card {
+  background-color: rgba(
+    249,
+    249,
+    249,
+    0.9
+  ); /* Using the provided color with opacity */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  flex: 0.5;
+  border-radius: 8px;
+}
+
+.card05 {
+  width: 180px;
+  height: 90px;
+  border-radius: 20px;
+  background-color: #ffd027;
+  font-family: Urbanist;
+  flex: 0.5;
+  font-weight: bold;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  margin-left: -90px;
+  font-size: 30px;
+  text-align: center;
+  margin-top: 120px;
+  padding-bottom: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.percentage_text {
+  font-size: 60px;
+  text-align: center;
+  padding-top: 10px;
+  font-weight: 500;
+  font-family: Urbanist;
+}
+
+.percentage_title_text {
+  font-size: 18px;
+  text-align: center;
+  font-weight: 500;
+  margin-left: -40%;
+  margin-bottom: -10%;
+  font-family: Urbanist;
+}
+
+.percentage_grey_text {
+  color: #cccdcc;
+  font-family: Urbanist;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.revenue_text {
+  font-family: Urbanist;
+  font-size: 30px;
+  margin-left: 10%;
+  font-weight: 500;
+  margin-top: -2%;
+}
+
+.simplebar {
+  flex: 0.3;
+  background-color: green;
+  margin-left: 5px;
+  height: 5px;
+  margin-right: 5px;
+}

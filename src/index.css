@@ -1,13 +1,125 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0px;
+  margin: 0px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.navbar {
+  position: relative;
+  display: flex;
+  padding: 10px;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 1%;
+  border-radius: 20px;
+  background-color: #0d0d0d;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 7px 5px 15px -4px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 7px 5px 15px -4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 7px 5px 15px -4px rgba(0, 0, 0, 0.75);
+}
+
+.nav-items {
+  background-color: #242524;
+  border-radius: 20px;
+}
+
+.nav-items > ul > li {
+  position: relative;
+  display: inline;
+  list-style: none;
+  margin: 10px;
+  font-family: Urbanist;
+  color: #f9f9f9;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.nav-items > ul > li > a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-items > ul > li::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.17rem;
+  background-color: #c52726;
+  left: 0;
+  bottom: 0;
+
+  transform-origin: 0% 100%;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.nav-items > ul > li:hover::after {
+  transform: scaleX(1);
+}
+
+.nav-logo {
+  max-height: 50px;
+  margin-left: 5%;
+}
+
+.nav-logo img {
+  height: 50px;
+  margin-top: 2px;
+}
+
+.nav-button a {
+  color: #0d0d0d;
+  list-style: none;
+  text-decoration: none;
+  display: flex;
+}
+
+.nav-logo {
+  font-size: 32px;
+}
+
+.nav-button {
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.anim-layer {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0;
+  height: 100%;
+  background-color: white;
+
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.nav-button:hover .anim-layer {
+  width: 100%;
+  left: 0;
+}
+
+.nav-button:hover a {
+  color: #141214;
+}
+
+.nav-button a {
+  display: block;
+  padding: 10px 20px;
+  color: #0d0d0d;
+  font-weight: bold;
+  font-family: Urbanist;
+  text-decoration: none;
+  position: relative;
+  z-index: 1;
+}
+
+#hamburger-menu,
+#mobile-menu {
+  display: none;
 }
