@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-pascal-case */
 import React, { useEffect, useState } from "react";
 import "../css/Content.css";
 import Content_Card from "./Content_Card";
