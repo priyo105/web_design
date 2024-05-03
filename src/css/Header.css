@@ -33,3 +33,51 @@
   margin-top: -180px;
   margin-left: 28%;
 }
+
+/* Header.css */
+.header {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.firstLine,
+.secondLine,
+.thirdLine {
+  animation: slideIn 3s ease forwards;
+  opacity: 0;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.img_holder {
+  animation: fadeInImage 1s ease forwards;
+  opacity: 0;
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeInImage {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -229,3 +229,23 @@
   text-align: center;
   font-family: Urbanist;
 }
+
+.content_part_1 flex {
+  opacity: 0;
+}
+
+.appear .content_part_1,
+.appear .flex {
+  animation: fadeIn 3s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

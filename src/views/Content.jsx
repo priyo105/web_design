@@ -1,24 +1,35 @@
-/* eslint-disable react/jsx-pascal-case */
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../css/Content.css";
 import Content_Card from "./Content_Card";
 import Widget_Control_Card from "./Widget_Control_Card";
+import { useInView } from "react-intersection-observer";
 
 function Content() {
+  const [isVisible, setIsVisible] = useState(false);
+  const [contentRef, inView] = useInView({
+    threshold: 0.5, // Trigger animation when 50% of the component is in view
+  });
+
+  useEffect(() => {
+    if (inView && !isVisible) {
+      setIsVisible(true);
+    }
+  }, [inView, isVisible]);
+
   return (
-    <div>
-      <div class="content_part_1">
+    <div ref={contentRef} className={`content ${isVisible ? "appear" : ""}`}>
+      <div className="content_part_1">
         <div>
           <p>You key to strategic</p>
-          <p class="text">success through analytics</p>
+          <p className="text">success through analytics</p>
         </div>
-        <div class="smaller_text">
+        <div className="smaller_text">
           <p>Ready for exciting, instantaneous,</p>
           <p>all-accessible insights in real time ?</p>
         </div>
       </div>
 
-      <div class="flex">
+      <div className="flex">
         <Content_Card />
         <Widget_Control_Card />
       </div>
@@ -28,7 +39,7 @@ function Content() {
         style={{ justifyContent: "center", marginTop: "-100px" }}
       >
         <p style={{ textAlign: "center", flex: 0.25 }}>
-          Up to <span class="black_text_large"> 45%</span>{" "}
+          Up to <span className="black_text_large"> 45%</span>{" "}
         </p>
 
         <div style={{ marginLeft: 0, marginTop: 20 }}>

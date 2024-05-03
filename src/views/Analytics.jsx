@@ -1,19 +1,42 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useSpring, animated, config } from "react-spring";
+import { useInView } from "react-intersection-observer";
 import "../css/Analytics.css";
 import CollapsableCard from "../components/CollapsableCard";
 
 function Analytics() {
+  const [ref, inView] = useInView({
+    threshold: 0.5,
+  });
+
+  const fadeIn = useSpring({
+    opacity: inView ? 1 : 0,
+    from: { opacity: 0 },
+    config: config.molasses,
+  });
+
+  const ramosSpring = useSpring({
+    from: { transform: "translateX(-100%)" },
+    to: { transform: inView ? "translateX(0)" : "translateX(-100%)" },
+    config: { duration: 3000 },
+  });
+
+  useEffect(() => {
+    if (inView) {
+    }
+  }, [inView]);
+
   return (
-    <div className="common_margin">
-      <div>
+    <div className="common_margin" ref={ref}>
+      <animated.div style={fadeIn}>
         <p className="semi_large_text common_margin">
           Turning Data into real <br /> actions and ideas.
         </p>
-      </div>
+      </animated.div>
 
       <div className="flex">
         <div style={{ flex: 1 }}>
-          <div>
+          <animated.div style={fadeIn}>
             <CollapsableCard text={"Instant insights"} />
             <div style={{ marginTop: "-7%" }}>
               <CollapsableCard text={"AI Technology"} />
@@ -21,7 +44,7 @@ function Analytics() {
             <div style={{ marginTop: "-7%" }}>
               <CollapsableCard text={"Easy Integration"} />
             </div>
-          </div>
+          </animated.div>
         </div>
 
         <div style={{ position: "relative", width: "40%" }}>
@@ -44,15 +67,17 @@ function Analytics() {
           />
         </div>
       </div>
-      <p className="servcie_huge_text">RAMOS</p>
+      <animated.p className="servcie_huge_text" style={ramosSpring}>
+        RAMOS
+      </animated.p>
 
-      <p
+      <animated.p
         className="service_font_large common_margin"
-        style={{ marginTop: "-10%" }}
+        style={{ marginTop: "-10%", ...fadeIn }}
       >
         We give you full <br /> <span className="greytext">control</span> over
         your data
-      </p>
+      </animated.p>
     </div>
   );
 }

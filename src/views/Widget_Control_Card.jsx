@@ -1,6 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
+import { useSpring, animated } from "react-spring";
 import RoundedImage from "../components/RoundedImage";
+
 function Widget_Control_Card() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  const numberSpring = useSpring({
+    number: isVisible ? 43 : 0,
+    from: { number: 0 },
+    delay: 2000,
+    config: { duration: 3000 }, // Set animation duration to 10 seconds
+  });
+
+  const handleScroll = () => {
+    const element = document.querySelector(".card04");
+    if (element) {
+      const elementTop = element.getBoundingClientRect().top;
+      const isVisible = elementTop < window.innerHeight;
+      setIsVisible(isVisible);
+    }
+  };
+
+  // Attach scroll event listener to check visibility
+  React.useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <div className="card04">
       <div className="flex justify_center">
@@ -35,24 +63,24 @@ function Widget_Control_Card() {
           </div>
           <div className="subcard">
             <div style={{ marginTop: "20px", marginLeft: "20px" }}>
-              <p class="white_text_small">Transactions</p>
+              <p className="white_text_small">Transactions</p>
             </div>
 
             <div className="flex" style={{ justifyContent: "center" }}>
               <img src="./increase.png" height={20} alt="" />
               <p className="percentage">+14%</p>
             </div>
-            <p
+            <animated.p
               className="white_text_large"
               style={{ textAlign: "center", marginTop: "5px" }}
             >
-              43K
-            </p>
+              {numberSpring.number.interpolate((val) => `${val.toFixed(0)}K`)}
+            </animated.p>
           </div>
         </div>
       </div>
-      <p class="white_text_medium">Widget Control</p>
-      <p class="grey_smaller_text text_center">
+      <p className="white_text_medium">Widget Control</p>
+      <p className="grey_smaller_text text_center">
         Reports Provide a comprehensive overview <br />
         of important aspects of web analytics
       </p>
