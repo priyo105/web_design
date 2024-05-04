@@ -53,7 +53,7 @@ function Widget_Control_Card() {
                 <img src="./layers.png" alt="" height={30} width={30} />
               </div>
               <div
-                class="flex"
+                className="flex"
                 style={{ justifyContent: "center", marginTop: 30 }}
               >
                 <RoundedImage src={"./person1.jpg"} />

@@ -16,7 +16,8 @@
   margin-top: 5%;
 }
 .headerFont {
-  font-size: 100px;
+  font-size: 120px;
+  line-height: 60%;
   font-family: Urbanist;
 }
 
@@ -25,13 +26,14 @@
 }
 
 .header_asset_01 {
-  width: "100%";
+  width: 205px;
+  margin-top: 10px;
 }
 
 .thirdLine {
   display: flex;
   margin-top: -180px;
-  margin-left: 28%;
+  margin-left: 32%;
 }
 
 /* Header.css */

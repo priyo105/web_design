@@ -10,7 +10,7 @@ function Analytics() {
   });
 
   const fadeIn = useSpring({
-    opacity: inView ? 1 : 0,
+    opacity: inView ? 1 : () => (fadeIn.opacity.to === 1 ? 1 : 0),
     from: { opacity: 0 },
     config: config.molasses,
   });
@@ -27,58 +27,60 @@ function Analytics() {
   }, [inView]);
 
   return (
-    <div className="common_margin" ref={ref}>
-      <animated.div style={fadeIn}>
-        <p className="semi_large_text common_margin">
-          Turning Data into real <br /> actions and ideas.
-        </p>
-      </animated.div>
+      <div ref={ref}>
+          <div className="analytics">
+              <animated.div style={fadeIn}>
+                <p className="semi_large_text">
+                  Turning Data into real <br /> actions and ideas.
+                </p>
+              </animated.div>
 
-      <div className="flex">
-        <div style={{ flex: 1 }}>
-          <animated.div style={fadeIn}>
-            <CollapsableCard text={"Instant insights"} />
-            <div style={{ marginTop: "-7%" }}>
-              <CollapsableCard text={"AI Technology"} />
-            </div>
-            <div style={{ marginTop: "-7%" }}>
-              <CollapsableCard text={"Easy Integration"} />
-            </div>
-          </animated.div>
+              <div className="flex">
+                <div style={{ flex: 1 ,marginLeft:'250px'}}>
+                  <animated.div style={fadeIn}>
+                    <CollapsableCard text={"Instant insights"} />
+                    <div style={{ marginTop: "-7%" }}>
+                      <CollapsableCard text={"AI Technology"} />
+                    </div>
+                    <div style={{ marginTop: "-7%" }}>
+                      <CollapsableCard text={"Easy Integration"} />
+                    </div>
+                  </animated.div>
+                </div>
+
+                <div style={{ position: "relative", width: "40%" }}>
+                  <img
+                    src="./desktop.png"
+                    alt=""
+                    style={{
+                      width: "100%",
+                      height: "80%",
+                      position: "absolute",
+                      top: -140,
+                      left: -100,
+                      zIndex: 1,
+                    }}
+                  />
+                  <img
+                    src="./mobile.png"
+                    alt=""
+                    style={{ width: "40%", position: "relative", zIndex: 2,marginLeft:'-320px' }}
+                  />
+                </div>
+              </div>
+              <animated.p className="servcie_huge_text" style={ramosSpring}>
+                Ramos
+              </animated.p>
+          </div>
+
+            <animated.p
+              className="service_font_large common_margin"
+              style={{ marginTop: "-15%", ...fadeIn }}
+            >
+              We give you full <br /> <span className="greytext">control</span> over
+              your data
+            </animated.p>
         </div>
-
-        <div style={{ position: "relative", width: "40%" }}>
-          <img
-            src="./desktop.png"
-            alt=""
-            style={{
-              width: "80%",
-              height: "80%",
-              position: "absolute",
-              top: -140,
-              left: 100,
-              zIndex: -1,
-            }}
-          />
-          <img
-            src="./mobile.png"
-            alt=""
-            style={{ width: "40%", position: "relative", zIndex: 1 }}
-          />
-        </div>
-      </div>
-      <animated.p className="servcie_huge_text" style={ramosSpring}>
-        RAMOS
-      </animated.p>
-
-      <animated.p
-        className="service_font_large common_margin"
-        style={{ marginTop: "-10%", ...fadeIn }}
-      >
-        We give you full <br /> <span className="greytext">control</span> over
-        your data
-      </animated.p>
-    </div>
   );
 }
 

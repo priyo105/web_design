@@ -1,3 +1,7 @@
+.content.appear{
+  background: #f9f9f9;
+  border-radius: 5%;
+}
 .content_part_1 {
   display: flex;
   justify-content: space-between;
@@ -28,9 +32,8 @@
   width: 60%;
   border-radius: 15px;
   overflow: hidden;
-  margin-left: 10%;
   margin-bottom: 10%;
-  box-shadow: 0 4px 0px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 14px 0px 0 rgba(0, 0, 0, 0.02), 0 6px 20px 0 rgba(0, 0, 0, 0.02);
 }
 
 .card04 {
@@ -238,6 +241,13 @@
 .appear .flex {
   animation: fadeIn 3s forwards;
 }
+
+.content-footer{
+  margin-top: -130px;
+  padding-bottom: 50px;
+  justify-content: center;
+}
+
 
 @keyframes fadeIn {
   from {

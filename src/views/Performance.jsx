@@ -2,13 +2,13 @@ import React from "react";
 import "../css/Performance.css";
 import RoundedImage from "../components/RoundedImage";
 import SimpleBarChart from "../components/BarChart";
-function Performance() {
+function  Performance() {
   return (
     <div style={{ marginLeft: "2%" }}>
       <div className="flex" style={{ marginRight: "4%" }}>
         <div className="card" style={{ marginRight: 20 }}>
           <div className="flex">
-            <div className="padded_margins card" style={{ flex: 0.5 }}>
+            <div className="padded_margins card-1" style={{ flex: 0.5 }}>
               <p className="percentage_title_text">Conversion rate</p>
               <img
                 src="./statistics.png"
@@ -36,13 +36,13 @@ function Performance() {
               </p>
             </div>
 
-            <div className="card" style={{ marginLeft: "-10%" }}>
+            <div className="card-2" style={{ marginLeft: "-10%" }}>
               <p className="grey_small_text">Sales Revenue</p>
               <p className="revenue_text">$131,2 K</p>
               <div className="flex">
-                <div class="simplebar" />
-                <div class="simplebar" style={{ backgroundColor: "#ffd027" }} />
-                <div class="simplebar" />
+                <div className="simplebar" />
+                <div className="simplebar" style={{ backgroundColor: "#ffd027" }} />
+                <div className="simplebar" />
               </div>
 
               <div className="flex common_margin">
@@ -121,7 +121,7 @@ function Performance() {
         </div>
 
         <div className="card">
-          <div className="flex card" style={{ marginTop: "-8%" }}>
+          <div className="flex card-3" style={{ marginTop: "20px" }}>
             <img
               src="./link.png"
               height={20}
@@ -136,7 +136,7 @@ function Performance() {
               Finance Report
             </p>
           </div>
-          <div className=" card" style={{ marginTop: -40, marginLeft: "6%" }}>
+          <div className="card-4" style={{ marginTop: -40, marginLeft: "6%" }}>
             <div className="flex">
               <img
                 src="./statistics.png"
@@ -163,12 +163,12 @@ function Performance() {
                   $ 264,2k
                 </p>
 
-                <button class="btn" style={{ marginTop: -10, marginLeft: 20 }}>
+                <button className="btn" style={{ marginTop: -10, marginLeft: 20 }}>
                   Data Visualization
                 </button>
               </div>
 
-              <div style={{ marginTop: -150 }}>
+              <div style={{ marginTop: -80 }}>
                 <SimpleBarChart />
               </div>
             </div>

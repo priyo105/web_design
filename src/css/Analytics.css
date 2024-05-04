@@ -3,6 +3,7 @@
   color: #0d0d0d;
   font-weight: 500;
   font-family: Urbanist;
+  margin-left: 15%;
 }
 
 .servcie_huge_text {
@@ -12,4 +13,11 @@
   font-weight: bold;
   margin-top: -15%;
   font-family: Urbanist;
+}
+
+.analytics{
+  background-color: #f9f9f9;
+  border-radius: 5%;
+  margin-top: 60px;
+  padding-top:20px;
 }

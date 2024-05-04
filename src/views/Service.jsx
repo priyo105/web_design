@@ -68,7 +68,7 @@ function Service() {
           </animated.p>
         </div>
       </div>
-
+      <div className="service-hr"></div>
       <div className="flex" style={{ justifyContent: "space-between" }}>
         <p className="ser_black_text_medium">
           Explore Traffic sources, page behaviour, conversions and more to gain

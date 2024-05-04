@@ -36,9 +36,7 @@ function Content() {
       </div>
 
       <div
-        className="flex"
-        style={{ justifyContent: "center", marginTop: "-100px" }}
-      >
+        className="flex content-footer">
         <p style={{ textAlign: "center", flex: 0.25 }}>
           Up to <span className="black_text_large"> 45%</span>{" "}
         </p>

@@ -70,7 +70,7 @@ const LineChart = () => {
 
   return (
     <div>
-      <p class="normal_small_text common_margin">Visit Statistics</p>
+      <p className="normal_small_text common_margin">Visit Statistics</p>
       <Chart options={options} series={series} type="line" height={160} />
     </div>
   );

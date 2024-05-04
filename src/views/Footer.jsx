@@ -1,9 +1,31 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../css/Footer.css";
 
 function Footer() {
+  const [fadeIn, setFadeIn] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const footer = document.querySelector(".footer");
+      if (footer) {
+        const footerTop = footer.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        const threshold = windowHeight * 0.75; // Threshold for fade-in
+
+        if (footerTop < threshold) {
+          setFadeIn(true);
+        } else {
+          setFadeIn(false);
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Call handleScroll once on mount to check initial state
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   return (
-    <div className="footer">
+    <div className={`footer ${fadeIn ? "fade-in" : ""}`}>
       <div className="flex" style={{ justifyContent: "space-evenly" }}>
         <div className="flex common_margin" style={{ flex: 0.9 }}>
           <p className="grey_small_text">About</p>

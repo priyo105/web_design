@@ -3,30 +3,30 @@ import "../css/Header.css";
 
 function Header() {
   return (
-    <div class="header">
-      <div class="firstLine">
-        <div class="img_holder">
-          <img src="./header_asset_01.png" class="header_asset_01" alt="" />
+    <div className="header">
+      <div className="firstLine">
+        <div className="img_holder">
+          <img src="./header_asset_001.png" className="header_asset_01" alt="" />
         </div>
         <div>
-          <p class="headerFont">Analytics</p>
+          <p className="headerFont">Analytics</p>
         </div>
       </div>
 
       <div style={{ display: "flex" }}>
-        <div class="secondLine">
+        <div className="secondLine">
           <p className="headerFont">
-            that <span class="greytext">helps</span> you
+            that <span className="greytext">helps</span> you
           </p>
         </div>
         <img
           src="./desktop_img.png"
           alt=""
-          style={{ marginTop: "-12%", marginLeft: "2%", height: "300px" }}
+          style={{ marginTop: "-13%",  height: "300px" }}
         />
       </div>
 
-      <div class="thirdLine">
+      <div className="thirdLine">
         <p className="headerFont">shape</p>
         <img
           src="./header_asset_02.png"

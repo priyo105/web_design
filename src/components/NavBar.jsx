@@ -4,11 +4,11 @@ import React from "react";
 function NavBar() {
   return (
     <div>
-      <div class="navbar">
-        <div class="nav-logo">
+      <div className="navbar">
+        <div className="nav-logo">
           <img src="./logo.png" alt="" />
         </div>
-        <div class="nav-items">
+        <div className="nav-items">
           <ul>
             <li>
               <a href="#"> Dashboard </a>
@@ -27,9 +27,9 @@ function NavBar() {
             </li>
           </ul>
         </div>
-        <div class="nav-button">
-          <div class="anim-layer"></div>
-          <a href="#" class="nav-button-font">
+        <div className="nav-button">
+          <div className="anim-layer"></div>
+          <a href="#" className="nav-button-font">
             Sign Up
           </a>
         </div>
